@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_photo_moment"
+            android:icon="@drawable/ic_menu_camera2"
+            android:title="Add Photo Moment" />
+        <item
+            android:id="@+id/nav_expense_moment"
+            android:icon="@drawable/ic_menu_dollar"
+            android:title="Add Expense" />
+        <item
+            android:id="@+id/nav_weather_moment"
+            android:icon="@drawable/ic_menu_weather"
+            android:title="Weather" />
+        <item
+            android:id="@+id/nav_nearby"
+            android:icon="@drawable/ic_menu_map"
+            android:title="Near By" />
+        <item
+            android:id="@+id/nav_all_expense"
+            android:icon="@drawable/ic_menu_dollar"
+            android:title="All expenses" />
+    </group>
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_logout_moment"
+            android:icon="@drawable/ic_menu_logout"
+            android:title="Logout" />
+    </group>
+
+    <item
+        android:id="@+id/nav_about_moment"
+        android:icon="@drawable/ic_menu_about"
+        android:title="About Us" />
+
+</menu>

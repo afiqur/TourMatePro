@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.afiqur.tourmatepro">
+
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:icon="@mipmap/tourmate"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".LoginActivity">
+
+
+        </activity>
+        <activity android:name=".SignupActivity" />
+        <activity android:name=".SplashActivity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity android:name=".AboutActivity"
+            android:label="About"></activity>
+        <activity
+            android:name=".TravelEvent.TravelActivity"
+            android:label="@string/title_activity_travel"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".TravelEvent.AddTravelEvent"
+            android:label="Add Event"/>
+        <activity
+            android:name=".Moment.ActivityMoment"
+            android:label="@string/title_activity_moment"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Expense.AddMomentExpenseActivity"
+            android:label="Abb Expense Moment"/>
+        <activity android:name=".Expense.ExpenseActivity"
+            android:label="All Expenses"/>
+        <activity android:name=".PhotoMoment.AddPhotoMoment"
+            android:label="Add Photo Moment"/>
+        <activity android:name=".NearBy.MapsActivity" />
+
+        <activity android:name=".TravelEvent.UpdateTravelEvent"
+            android:label="Update Event"></activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+    </application>
+
+</manifest>

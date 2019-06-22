@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Moment.ActivityMoment"
+    tools:showIn="@layout/app_bar_activity_moment">
+
+
+    <RelativeLayout
+        android:id="@+id/rlExpenseEvent"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/tvExpenseEventName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="4dp"
+            android:text="Event Name"
+            android:textSize="30sp"/>
+
+        <ImageButton
+            android:id="@+id/ibEmergency"
+            android:src="@drawable/ic_call"
+            android:onClick="callEmergency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:id="@+id/tvExpenseEventHyphen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvExpenseEventName"
+            android:layout_centerHorizontal="true"
+            android:text=" - "
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/tvExpenseEventFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvExpenseEventName"
+            android:layout_toLeftOf="@+id/tvExpenseEventHyphen"
+            android:gravity="center_horizontal"
+            android:text="1/1/2017"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/tvExpenseEventTo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvExpenseEventName"
+            android:layout_toRightOf="@+id/tvExpenseEventHyphen"
+            android:gravity="center_horizontal"
+            android:text="31/12/2017"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/tvExpenseEventColon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvExpenseEventFrom"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:text=": "
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/tvExpenseEventBudget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvExpenseEventFrom"
+            android:layout_marginTop="4dp"
+            android:layout_toLeftOf="@+id/tvExpenseEventColon"
+            android:text="Budget"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/tvExpenseEventBudgetAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tvExpenseEventBudget"
+            android:layout_centerHorizontal="true"
+            android:layout_toRightOf="@+id/tvExpenseEventColon"
+            android:text="3000"
+            android:textSize="20sp"/>
+
+    </RelativeLayout>
+
+
+
+    <ListView
+        android:id="@+id/lvMomentList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rlExpenseEvent"
+        android:padding="2dp">
+    </ListView>
+
+    <ImageButton
+        android:id="@+id/imageButtonDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        app:srcCompat="@drawable/updateec" />
+
+
+    <ImageButton
+        android:id="@+id/imageButtonUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/deleteec"
+        android:layout_above="@+id/lvMomentList"
+        android:layout_alignStart="@+id/imageButtonDelete" />
+
+
+</RelativeLayout>

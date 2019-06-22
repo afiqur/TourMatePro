@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Expense.ExpenseActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlExpenseEvent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/tvExpenseEventName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="4dp"
+            android:text="All Expenses from this Event"
+            android:textSize="25sp"/>
+
+        <TextView
+            android:id="@+id/tvExpenseEventBudget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Budget"
+            android:textSize="20sp"
+            android:visibility="gone"
+            android:layout_marginEnd="60dp"
+            android:layout_below="@+id/tvExpenseEventName"
+            android:layout_alignStart="@+id/tvExpenseEventName" />
+
+        <TextView
+            android:id="@+id/tvExpenseEventBudgetAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100"
+            android:visibility="gone"
+            android:textSize="20sp"
+            android:layout_toRightOf="@+id/tvExpenseEventBudget"
+            android:layout_below="@+id/tvExpenseEventName"/>
+
+
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lvExpenseList"
+        android:layout_below="@+id/rlExpenseEvent"
+        android:padding="4dp"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
+
+    <TextView
+        android:id="@+id/RemainingBudget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:visibility="gone"
+        android:layout_marginEnd="25dp"
+        android:text="Remaining"
+        android:layout_above="@+id/lvExpenseList"
+        android:layout_toStartOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:visibility="gone"
+        android:layout_alignBottom="@+id/RemainingBudget"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="41dp"
+        android:text="50" />
+
+</RelativeLayout>

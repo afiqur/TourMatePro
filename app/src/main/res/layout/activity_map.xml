@@ -1,0 +1,70 @@
+<FrameLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <fragment android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context="com.androidtutorialpoint.googlemapsretrofit.MapsActivity"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_lat"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:id="@+id/exit"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:src="@drawable/backk"/>
+
+        <Button
+            android:id="@+id/btnHospital"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="Hospitals"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btnPharmacy"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="Pharmacy"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btnHotel"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="Hotels"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btnAtm"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="ATMs"
+            android:textAllCaps="false" />
+
+
+    </LinearLayout>
+
+</FrameLayout>
